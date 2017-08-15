@@ -1,0 +1,123 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+li {
+  list-style: none;
+  cursor: pointer; }
+
+a {
+  text-decoration: none; }
+
+input {
+  outline: none;
+  border: 0px; }
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "microsoft yahei";
+  overflow: hidden; 
+}
+.xw-container {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/ruanBG.png);
+  background-repeat:no-repeat ;
+	background-size:100%;
+  position: relative;
+}
+.xw-container .right-today-show {
+    width: 4.3rem;
+    height: 1rem;
+    float: right;
+    color: #007fca; 
+}
+.xw-container .right-today-show .date-show {
+  text-align: center;
+  margin: 0.2rem 0.5rem 0 0;
+  height: 100%;
+  float: right;
+}
+  .xw-container .right-today-show .date-show .hour {
+    font-size: 0.22rem; font-weight: bold;}
+  .xw-container .right-today-show .date-show .year-month {
+    font-size: 0.4rem; }
+    
+.xw-container .main-bodyBox{
+	width: 100%;
+	height:100%;
+	padding: 1.2rem 0.2rem 0.2rem;
+}
+.xw-container .main-bodyBox [class^="main-box-"]{
+		width: 100%;
+}
+.xw-container .main-bodyBox .main-box-top{
+	height: 58%;
+}
+.xw-container .main-bodyBox .main-box-top .left-mapBox{
+	width: 65.6%;
+	height: 100%;
+	float: left;
+	border: 1px solid #23579d;
+}
+.xw-container .main-bodyBox .main-box-top .right-eahartBox{
+	width:6.22rem;
+	height: 100%;
+	float: right;
+}
+.xw-container .main-bodyBox [class^="echarts-box-"]{
+	background-repeat: no-repeat;
+	background-size: 100%;
+	position: relative;
+	padding: 0.2rem;
+}
+.xw-container .main-bodyBox .main-box-top .right-eahartBox .echarts-box-a{
+	background-image:url(../img/ruanBox1.png) ;
+	height: 1.68rem;
+	width: 6.22rem;
+}
+.xw-container .main-bodyBox .main-box-top .right-eahartBox .echarts-box-b{
+	background-image:url(../img/ruanBox2.png) ;
+	height: 3.74rem;
+	width: 6.22rem;
+	margin-top: 0.1rem;
+}
+.xw-container .main-bodyBox .main-box-bottom{
+	height:3.74rem;
+	margin-top: 0.2rem;
+}
+.xw-container .main-bodyBox .main-box-bottom [class^="echarts-box-"]{
+	height: 3.74rem;
+	width: 6.22rem;
+	float: left;
+}
+.xw-container .main-bodyBox .main-box-bottom .echarts-box-c{
+	background-image:url(../img/ruanBox3.png) ;
+	width: 6.94rem;
+}
+.xw-container .main-bodyBox .main-box-bottom .echarts-box-d{
+	background-image:url(../img/ruanBox4.png) ;
+	width: 5.44rem;
+	margin-left: 0.1rem;
+}
+.xw-container .main-bodyBox .main-box-bottom .echarts-box-e{
+	background-image:url(../img/ruanBox5.png) ;
+	margin-left: 0.1rem;
+}
+.xw-container .main-bodyBox .echarts-title{
+	color: #26d8e2;
+	font-size: 0.2rem;
+	font-weight: bold;
+	
+}
+.xw-container .main-bodyBox .show-echartsBox{
+	width: 94%;
+	height: 88%;
+	text-align: center;
+	margin: 0 auto;
+}
+.xw-container .main-bodyBox .echarts-box-a .show-echartsBox{
+	height: 1rem;
+    line-height: 1rem;
+}

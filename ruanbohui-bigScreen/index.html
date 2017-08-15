@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>软博会大屏</title>
+		<link rel="stylesheet" href="css/ruanbohui.css" />
+		<link rel="stylesheet" href="css/odometer-theme-car.css" />
+	</head>
+		<script>
+			(function(doc,win){
+				var doc = document; 
+				var docEl = doc.documentElement,
+				    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				    recalc = function() {
+				        var container = document.querySelector(".xw-container");
+				        var clientWidth = docEl.clientWidth;
+				        if (!clientWidth) return;
+				        docEl.style.fontSize = clientWidth / 19.2 + 'px';
+				    };
+				window.addEventListener(resizeEvt, recalc, false);
+				doc.addEventListener('DOMContentLoaded', recalc, false);
+			})(document,window);
+		</script>
+		<style>
+			.odo-num{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 1.4rem;
+				background: rgba(0,0,0,0.3);
+				font-size: 0.34rem;
+				color: #009fe8;
+				text-align: center;
+				line-height: 1.4rem;
+			}
+		.odometer-auto-theme .odometer-inside .odometer-digit {
+				box-shadow: none;
+				border: none;
+				background: transparent;
+				margin-right: 0.1rem;
+				width: 0.7rem;
+				height:0.8rem;
+				line-height: 0.8rem;
+				text-align: center;
+				position: relative;
+				top: -0.1rem;
+			}
+			.odometer.odometer-auto-theme, .odometer.odometer-theme-car{
+				background-color:transparent; 
+			}
+			
+			.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner,
+			.odometer.odometer-theme-car .odometer-digit .odometer-digit-inner {
+				left: 0;
+			}
+			
+			.odometer.odometer-auto-theme,
+			.odometer.odometer-theme-car {
+				padding: 0;
+			}
+			
+			
+			.odometer-auto-theme .odometer-inside .odometer-formatting-mark {
+				color: #009fe8;
+			}
+			
+			.odometer.odometer-auto-theme .odometer-digit .odometer-value,
+			.odometer.odometer-theme-car .odometer-digit .odometer-value {
+                margin-right: 0.1rem;
+                text-align: center;
+                font-size:0.5rem;
+                font-weight: bold;
+                color: #009fe8;
+                background:rgba(8, 41, 72, 0.6); 
+                position: relative;
+			}
+			.odometer.odometer-auto-theme .odometer-digit .odometer-value:before,
+			.odometer.odometer-theme-car .odometer-digit .odometer-value:before{
+				content: '';
+				width: 100%;
+				height: 2px;
+				z-index: -1;
+				background:#1c3355 ;
+				position: absolute;
+				top: 50%;
+				left: 0;
+			}
+		</style>
+	<body>
+		<div class="xw-container">
+			<div class="right-today-show">
+				<div class="date-show">
+					<div class="hour" id="hour">2017年01月11日</div>
+					<div class="year-month" id="year-month">14:10:59</div>
+				</div>
+			</div>
+			<div class="main-bodyBox">
+				<div class="main-box-top">
+					<div class="left-mapBox"></div>
+					<div class="right-eahartBox">
+						<div class="echarts-box-a">
+							<div class="echarts-title">软博会参观人数</div>
+							<div class="show-echartsBox">
+									<span class="odometer numAll"></span></p>
+							</div>
+						</div>
+						<div class="echarts-box-b">
+							<div class="echarts-title">实时客流来源</div>
+							<div class="show-echartsBox"></div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="main-box-bottom">
+					<div class="echarts-box-c">
+						<div class="echarts-title">实时客源属性</div>
+						<div class="show-echartsBox"></div>
+					</div>
+					<div class="echarts-box-d">
+						<div class="echarts-title">实时客流TOP10</div>
+						<div class="show-echartsBox"></div>
+					</div>
+					<div class="echarts-box-e">
+						<div class="echarts-title">展馆内实时人数</div>
+						<div class="show-echartsBox"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+	<script type="text/javascript" src="js/odometer.min.js" ></script>
+	<script>
+		//顶部时间
+		 setInterval((function () {
+	        var nowTime = new Date(),
+	            dateString = nowTime.getFullYear() + '年' + (nowTime.getMonth() + 1) + '月' + nowTime.getDate() + '日 ',
+	            timeString = toTwo(nowTime.getHours()) + ':' + toTwo(nowTime.getMinutes()) + ':' + toTwo(nowTime.getSeconds());
+	
+	        document.getElementById('year-month').innerHTML = timeString ;
+	        document.getElementById('hour').innerHTML = dateString ;
+	
+	        function toTwo(n) {
+	            return n < 10 ? "0" + n : n.toString();
+	        }
+	
+	        return arguments.callee;
+	    }()));
+	    
+	     //数字滚动设置
+			setTimeout(function() {
+				$('.numAll.odometer').html(723505);
+			}, 1000)
+	</script>
+</html>
