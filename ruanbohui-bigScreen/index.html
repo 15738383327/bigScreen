@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<meta name="Description" content=""/>
 		<title>软博会大屏</title>
 		<link rel="stylesheet" href="css/ruanbohui.css" />
 		<link rel="stylesheet" href="css/odometer-theme-car.css" />
@@ -134,6 +135,7 @@
 	<script>
 		//顶部时间
 		 setInterval((function () {
+		 	
 	        var nowTime = new Date(),
 	            dateString = nowTime.getFullYear() + '年' + (nowTime.getMonth() + 1) + '月' + nowTime.getDate() + '日 ',
 	            timeString = toTwo(nowTime.getHours()) + ':' + toTwo(nowTime.getMinutes()) + ':' + toTwo(nowTime.getSeconds());
@@ -144,10 +146,8 @@
 	        function toTwo(n) {
 	            return n < 10 ? "0" + n : n.toString();
 	        }
-	
 	        return arguments.callee;
 	    }()));
-	    
 	     //数字滚动设置
 			setTimeout(function() {
 				$('.numAll.odometer').html(723505);
