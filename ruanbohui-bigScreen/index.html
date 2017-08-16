@@ -98,7 +98,7 @@
 			</div>
 			<div class="main-bodyBox">
 				<div class="main-box-top">
-					<div class="left-mapBox"></div>
+					<div class="left-mapBox" id="mapBox"></div>
 					<div class="right-eahartBox">
 						<div class="echarts-box-a">
 							<div class="echarts-title">软博会参观人数</div>
@@ -108,7 +108,7 @@
 						</div>
 						<div class="echarts-box-b">
 							<div class="echarts-title">实时客流来源</div>
-							<div class="show-echartsBox"></div>
+							<div class="show-echartsBox" id="echartsBox1"></div>
 						</div>
 					</div>
 					
@@ -116,11 +116,26 @@
 				<div class="main-box-bottom">
 					<div class="echarts-box-c">
 						<div class="echarts-title">实时客源属性</div>
-						<div class="show-echartsBox"></div>
+						<div class="show-echartsBox">
+							<div class="bingEchart"></div>
+							<div class="bingEchart huan">
+								<div class="sexBox"></div>
+								<div class="sexBox"></div>
+							</div>
+						</div>
 					</div>
 					<div class="echarts-box-d">
 						<div class="echarts-title">实时客流TOP10</div>
-						<div class="show-echartsBox"></div>
+						<div class="tab-city" id="tab-city">
+							<span>省内</span>
+							<span>省外</span>
+							<span>境外</span>
+						</div>
+						<div class="show-echartsBox" id="echartsBox-change">
+							<div class="echartsBox"></div>
+							<div class="echartsBox"></div>
+							<div class="echartsBox"></div>
+						</div>
 					</div>
 					<div class="echarts-box-e">
 						<div class="echarts-title">展馆内实时人数</div>
@@ -131,7 +146,9 @@
 		</div>
 	</body>
 	<script type="text/javascript" src="js/jquery-1.12.4.min.js" ></script>
+	<script src="http://api.map.baidu.com/api?v=2.0&ak=BzL5c9UaDlph64beEDkDNzG3wrsNZ2b0 "></script>
 	<script type="text/javascript" src="js/odometer.min.js" ></script>
+	<script type="text/javascript" src="js/echarts.min.js" ></script>
 	<script>
 		//顶部时间
 		 setInterval((function () {
@@ -152,5 +169,13 @@
 			setTimeout(function() {
 				$('.numAll.odometer').html(723505);
 			}, 1000)
+			
+			//控制echarts显示
+			$('#tab-city span').click(function(){
+				var index= $(this).index();
+				$(this).addClass('Click').siblings().removeClass('Click');
+				$('#echartsBox-change .echartsBox').eq(index).show().siblings().hide();
+			});
+			$('#tab-city span:eq(0)').trigger('click');
 	</script>
 </html>

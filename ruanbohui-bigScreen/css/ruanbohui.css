@@ -121,3 +121,49 @@ html, body {
 	height: 1rem;
     line-height: 1rem;
 }
+.xw-container .main-bodyBox .tab-city{
+	border: 1px solid #19325e;
+	height: 0.4rem;
+	line-height: 0.4rem;
+	width: 40%;	
+	position: relative;
+	z-index: 9;
+	float: right;
+	cursor: pointer;
+}
+.xw-container .main-bodyBox  .tab-city span{
+	display: inline-block;
+	text-align: center;
+	font-size: 14px;
+	width: 33.3%;
+	height: 100%;
+	color: #fff;
+	float: left;
+	box-sizing: border-box;
+}
+.xw-container .main-bodyBox .tab-city span:hover{
+	background: #3685fe;
+}
+.xw-container .main-bodyBox .tab-city span.Click{
+	background: #3685fe;
+}
+.xw-container .main-bodyBox .echarts-box-d .show-echartsBox .echartsBox{
+	width: 100%;
+	height: 100%;
+}
+.xw-container .main-bodyBox .echarts-box-c .show-echartsBox .bingEchart{
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+.xw-container .main-bodyBox .echarts-box-c .show-echartsBox .bingEchart.huan{
+	padding: 0.1rem;
+}
+.xw-container .main-bodyBox .echarts-box-c .show-echartsBox .bingEchart .sexBox{
+	width: 60%;
+	height:50%;
+	border: 1px solid #fff;
+}
+.xw-container .main-bodyBox .echarts-box-c .show-echartsBox .bingEchart .sexBox:nth-child(2){
+	margin-top: 0.1rem;
+}
