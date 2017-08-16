@@ -62,7 +62,7 @@ html, body {
 	border: 1px solid #23579d;
 }
 .xw-container .main-bodyBox .main-box-top .right-eahartBox{
-	width:6.22rem;
+	width:33%;
 	height: 100%;
 	float: right;
 }
@@ -79,8 +79,8 @@ html, body {
 }
 .xw-container .main-bodyBox .main-box-top .right-eahartBox .echarts-box-b{
 	background-image:url(../img/ruanBox2.png) ;
-	height: 3.74rem;
-	width: 6.22rem;
+	height: 69%;
+	width:100%;
 	margin-top: 0.1rem;
 }
 .xw-container .main-bodyBox .main-box-bottom{
