@@ -98,7 +98,9 @@
 			</div>
 			<div class="main-bodyBox">
 				<div class="main-box-top">
-					<div class="left-mapBox" id="mapBox"></div>
+					<div class="left-mapBox" >
+						<div id="mapBox"></div>
+					</div>
 					<div class="right-eahartBox">
 						<div class="echarts-box-a">
 							<div class="echarts-title">软博会参观人数</div>
@@ -180,6 +182,9 @@
 			});
 			$('#tab-city span:eq(0)').trigger('click');
 			
+			var map = new BMap.Map('mapBox');
+			map.centerAndZoom('南京',19);
+			map.enableScrollWheelZoom()
 			
 	</script>
 </html>

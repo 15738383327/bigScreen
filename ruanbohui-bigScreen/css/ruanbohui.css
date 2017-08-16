@@ -167,3 +167,11 @@ html, body {
 .xw-container .main-bodyBox .echarts-box-c .show-echartsBox .bingEchart .sexBox:nth-child(2){
 	margin-top: 0.1rem;
 }
+
+/*-------------*/
+#mapBox{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin: 0;
+}
